@@ -5,4 +5,3 @@ app = Flask(__name__)
 app.config.from_object(Config)  # import config from Config class
 
 from app import routes  # here, to prevent circular imports // why not at the top
-# from app import forms

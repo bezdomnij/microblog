@@ -24,7 +24,7 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        flash('Login requested for use {}, remember_me()= '.format(form.username.data, form.username.remember_me.data))
+        flash('Login requested for use {}, remember_me={} '.format(form.username.data, form.remember_me.data))
         return redirect('/index')
     return render_template('login.html', form=form, title='Sign In')
 
